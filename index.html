@@ -3,9 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>data-table</title>
-
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body style="margin: 20px;">
 
@@ -14,29 +11,21 @@
     <label>Name</label>
     <input type="text" class="form-control" name="name" placeholder="Jane Doe">
   </div>
-  <div class="form-group">
-    <label>Email</label>
-    <input type="text" class="form-control" name="email" placeholder="jane.doe@example.com">
-  </div>
   <button type="submit" class="btn btn-default">Send invitation</button>
   <button type="reset" class="btn btn-default"><i class="glyphicon glyphicon-repeat"></i></button>
 </form>
-<!-- data-operate 值为当前行可选操作, 格式为  '操作类型|操作名|class|api,....'
-    1: 页面层|操作名|class\方法名
-    2: iframe层|操作名|class\api
-    3: 询问框|操作名|class\api
--->
 <div data-gctable
-     data-url="http://192.168.17.34:8888/api/bootstrapTable"
-     data-label="品名,分类,商铺名,价格,装箱数"
+     data-url="http://localhost/users"
+     data-label="姓名,性别,生日,年龄,地址"
+     data-field="name,gender,birth,age,addr"
+     data-colWidth="100,70,120,70,200"
      data-query=".queryForm"
-     data-operate="2|详情|primary|http://192.168.17.34:8888/api/bootstrapTable,3|修改||update"
-     data-operateFilter="storename!=服装,"
-     data-field="name,classify,storename,price,pcs"
-     data-colWidth="80,160,120,120,200"
+     data-operate="详情|primary|v,修改|warning|u,删除|danger|d"
+     data-operateFilter=""
 ></div>
-<script src="assets/jquery.min.js"></script>
-<script src="assets/layer/layer.js"></script>
-<script src="index.js"></script>
+<script src="./asset/js/jquery.min.js"></script>
+<script src="./asset/css/bootstrap/js/bootstrap.min.js"></script>
+<script src="./asset/js/layer/layer.js"></script>
+<script src="./gcTable.js"></script>
 </body>
 </html>

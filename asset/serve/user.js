@@ -8,7 +8,7 @@ for (let i = 0; i < 80; i++) {
         addr: Mock.mock('@county(true)'),
         'age|18-60': 1,
         birth: Mock.Random.date(),
-        sex: Mock.Random.character('男女')
+        gender: Mock.Random.character('男女')
     }));
 }
 

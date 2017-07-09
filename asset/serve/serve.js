@@ -30,7 +30,7 @@ app.get('/users', (req, res) => {
       code: 200,
       data: {
         total: total,
-        users: mockUsers
+        data: mockUsers
       }
     });
   }, 1000);
